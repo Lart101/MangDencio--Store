@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt - Mang Dencio's Egg Store</title>
+    <style>
+           
+            .receipt {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .receipt h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .receipt h3 {
+            color: #555;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .receipt p {
+            color: #777;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .receipt ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 0;
+        }
+
+        .receipt ul li {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .receipt p.total {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .receipt p.payment-info {
+            margin-top: 20px;
+        }
+
+        .receipt p.payment-info span {
+            color: #f00;
+            font-weight: bold;
+        }
+
+        .receipt p.card-details {
+            margin-top: 10px;
+        }
+    </style>
+    </style>
+</head>
+<body>
+    <div id="receipt-content" class="receipt">
+      
+    </div>
+
+    <script>
+        
+        const urlParams = new URLSearchParams(window.location.search);
+        const receiptContent = urlParams.get('receiptContent');
+
+        
+        document.getElementById('receipt-content').innerHTML = decodeURIComponent(receiptContent);
+    </script>
+</body>
+</html>
