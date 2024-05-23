@@ -223,6 +223,11 @@
     }
 
     function generateReceipt() {
+         const totalAmount = parseFloat(document.getElementById('total-amount').textContent);
+        if (totalAmount === 0) {
+            alert('Your cart is empty. Please add items to your cart before submitting an order.');
+            return;
+        }
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const address = document.getElementById('address').value;
