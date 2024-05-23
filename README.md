@@ -1,0 +1,1 @@
+# MangDencio--Store
